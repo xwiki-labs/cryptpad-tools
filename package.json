@@ -1,0 +1,35 @@
+{
+  "name": "cryptpad_tools",
+  "version": "1.0.0",
+  "description": "Command line tools for accessing and debugging CryptPad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xwiki-labs/cryptpad_tools.git"
+  },
+  "keywords": [
+    "cryptpad",
+    "nodejs",
+    "tools"
+  ],
+  "author": "",
+  "license": "AGPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/xwiki-labs/cryptpad_tools/issues"
+  },
+  "homepage": "https://github.com/xwiki-labs/cryptpad_tools#readme",
+  "dependencies": {
+    "atob": "^2.1.0",
+    "chainpad": "git://github.com/xwiki-contrib/chainpad.git#chainwalk",
+    "chainpad-crypto": "git://github.com/xwiki-labs/chainpad-crypto.git#0.1.9",
+    "chainpad-netflux": "git://github.com/xwiki-labs/chainpad-netflux.git#master",
+    "cryptpad": "git://github.com/xwiki-labs/cryptpad.git#1.28.0",
+    "netflux-websocket": "git://github.com/xwiki-labs/netflux-websocket.git#master",
+    "nthen": "^0.1.7",
+    "requirejs": "^2.3.5",
+    "ws": "^5.1.1"
+  }
+}
