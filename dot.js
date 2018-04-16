@@ -31,11 +31,8 @@ const chainToDot = function (chainpad) {
 };
 
 if (/^http[s]*:\/\/\.*/.test(process.argv[process.argv.length-1])) {
-    Dump(process.argv[process.argv.length-1], (info) => {
-        console.log(chainToDot(info.realtime));
-        info.realtime.abort();
-        //console.log('done');
-        //console.log(info);
+    Dump.mkChainpad(process.argv[process.argv.length-1], (realtime) => {
+        console.log(chainToDot(realtime));
     });
 } else {
     console.log("Usage: node dot.js <full url of pad>");

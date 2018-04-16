@@ -2,8 +2,6 @@
 
 Command line tools for interacting with and debugging cryptpad.
 
-**NOTE**: This is still a work in progress, experiment at your own risk.
-
 ## dot.js
 
 ```bash
@@ -12,4 +10,18 @@ node ./dot.js <url of a given pad>
 
 Syncs the chain of the pad and generates DOT language code for graphing the chain underlying the pad.
 
-**CAUTION**: This does not sync the whole chain, only the part after the last 2 checkpoints, TODO: fix...
+## download.js
+
+```bash
+node ./download.js <url of a given pad>
+```
+
+Dumps the file as it is stored on the server (with entire history).
+
+## getcontent.js
+
+```bash
+node ./getcontent.js <url of a given pad>
+```
+
+Sync the chain and print the most recent version of the content of the pad.
