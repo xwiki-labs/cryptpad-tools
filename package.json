@@ -24,8 +24,8 @@
   "dependencies": {
     "atob": "^2.1.0",
     "chainpad": "git://github.com/xwiki-contrib/chainpad.git#chainwalk",
-    "chainpad-crypto": "git://github.com/xwiki-labs/chainpad-crypto.git#0.1.9",
-    "cryptpad": "git://github.com/xwiki-labs/cryptpad.git#1.28.0",
+    "chainpad-crypto": "git://github.com/xwiki-labs/chainpad-crypto.git#0.2.1",
+    "cryptpad": "git://github.com/xwiki-labs/cryptpad.git#2.9.0",
     "line-input-stream": "^1.0.1",
     "nthen": "^0.1.7",
     "requirejs": "^2.3.5"
