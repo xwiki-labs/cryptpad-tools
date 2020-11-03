@@ -49,6 +49,10 @@ const getSecrets = module.exports.getSecrets = (padURL, callback) => {
                 const f = new Function(['define'], str);
                 f(w((x) => {
                     fileHost = x.fileHost;
+                    // handle servers configured without host defined
+                    if (fileHost === undefined) {
+                        fileHost = cpServer;
+                    }
                 }))
             }));
         }));
