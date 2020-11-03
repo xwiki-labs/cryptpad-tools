@@ -49,6 +49,10 @@ const getSecrets = module.exports.getSecrets = (padURL, callback) => {
                 const f = new Function(['define'], str);
                 f(w((x) => {
                     fileHost = x.fileHost;
+                    // handle servers configured without host defined
+                    if (fileHost === undefined) {
+                        fileHost = cpServer;
+                    }
                 }))
             }));
         }));
@@ -89,6 +93,11 @@ module.exports.mkChainpad = (padURL, callback) => {
             noPrune: true
         });
         Https.get(secrets.padFile, (res) => {
+            if (res.statusCode !== 200) {
+                console.error("ERR: statusCode:",res.statusCode)
+                console.error("ERR: Server such as cryptpad.rf may restrict access to pad file based on origin/referrer. cryptPad file:",secrets.padFile)
+            }
+
             const lis = LineInputStream(res);
             lis.setEncoding("utf8");
             lis.setDelimiter("\n");
